@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #FFFFFF;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 36px 40px;
+    min-width: 1100px;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+  }
+
+  .mindmap {
+    position: relative;
+    width: 1040px;
+    height: 720px;
+    margin: 0 auto;
+  }
+
+  .center-node {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    background: #111827;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    z-index: 10;
+  }
+
+  .branch {
+    position: absolute;
+    width: 200px;
+  }
+
+  .branch-node {
+    background: #FFFFFF;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+  }
+  .branch-node .num {
+    font-size: 9px;
+    font-weight: 700;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+  }
+  .branch-node .label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.3;
+  }
+
+  /* SVG connectors */
+  svg.connectors {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Positioning: 12 discoveries arranged around center */
+  /* Top row */
+  .b1  { left: 60px;   top: 20px; }
+  .b2  { left: 280px;  top: 20px; }
+  .b3  { left: 560px;  top: 20px; }
+  .b4  { left: 780px;  top: 20px; }
+  /* Middle row */
+  .b5  { left: 20px;   top: 260px; }
+  .b6  { left: 820px;  top: 260px; }
+  /* Bottom row */
+  .b7  { left: 60px;   top: 510px; }
+  .b8  { left: 280px;  top: 510px; }
+  .b9  { left: 560px;  top: 510px; }
+  .b10 { left: 780px;  top: 510px; }
+  /* Extra mid positions */
+  .b11 { left: 160px;  top: 340px; }
+  .b12 { left: 680px;  top: 340px; }
+
+  /* Category colors */
+  .cat-physics { border-color: #3B82F6; }
+  .cat-physics .num { color: #3B82F6; }
+  .cat-thermo { border-color: #06B6D4; }
+  .cat-thermo .num { color: #06B6D4; }
+  .cat-bio { border-color: #22C55E; }
+  .cat-bio .num { color: #22C55E; }
+  .cat-meta { border-color: #F59E0B; }
+  .cat-meta .num { color: #F59E0B; }
+</style>
+</head>
+<body>
+
+<div class="title">Twelve Novel Discoveries of the G-Engine Framework</div>
+
+<div class="mindmap">
+  <svg class="connectors" viewBox="0 0 1040 720">
+    <!-- Lines from center (520, 360) to each branch center -->
+    <line x1="520" y1="360" x2="160" y2="55" stroke="#3B82F6" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="380" y2="55" stroke="#3B82F6" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="660" y2="55" stroke="#06B6D4" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="880" y2="55" stroke="#06B6D4" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="120" y2="290" stroke="#3B82F6" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="920" y2="290" stroke="#22C55E" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="160" y2="555" stroke="#F59E0B" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="380" y2="555" stroke="#3B82F6" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="660" y2="555" stroke="#06B6D4" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="880" y2="555" stroke="#F59E0B" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="260" y2="375" stroke="#22C55E" stroke-width="1.5" opacity="0.25"/>
+    <line x1="520" y1="360" x2="780" y2="375" stroke="#22C55E" stroke-width="1.5" opacity="0.25"/>
+  </svg>
+
+  <div class="center-node">12 Novel<br>Discoveries</div>
+
+  <!-- Top row -->
+  <div class="branch b1">
+    <div class="branch-node cat-physics">
+      <div class="num">Discovery 1</div>
+      <div class="label">Vacuum DC Offset: Nonzero DC potential at broken spatial symmetry</div>
+    </div>
+  </div>
+  <div class="branch b2">
+    <div class="branch-node cat-physics">
+      <div class="num">Discovery 2</div>
+      <div class="label">Topological Current: Fourth current mechanism via winding number of A</div>
+    </div>
+  </div>
+  <div class="branch b3">
+    <div class="branch-node cat-thermo">
+      <div class="num">Discovery 3</div>
+      <div class="label">Stochastic Resonance Conditioning: SNR tuning, not programming</div>
+    </div>
+  </div>
+  <div class="branch b4">
+    <div class="branch-node cat-thermo">
+      <div class="num">Discovery 4</div>
+      <div class="label">Hydrogen Line as Universal Grid Frequency: 1.42 GHz phase-lock</div>
+    </div>
+  </div>
+
+  <!-- Middle row -->
+  <div class="branch b5">
+    <div class="branch-node cat-physics">
+      <div class="num">Discovery 5</div>
+      <div class="label">Scale Invariance via alpha: Fine structure constant as vacuum attenuation</div>
+    </div>
+  </div>
+  <div class="branch b6">
+    <div class="branch-node cat-bio">
+      <div class="num">Discovery 6</div>
+      <div class="label">Operator Biofield Memory: Device persists 3 min after shutdown</div>
+    </div>
+  </div>
+
+  <!-- Extra mid -->
+  <div class="branch b11">
+    <div class="branch-node cat-bio">
+      <div class="num">Discovery 11</div>
+      <div class="label">Asymmetric Anti-Gravity: Active metric expansion below test mass</div>
+    </div>
+  </div>
+  <div class="branch b12">
+    <div class="branch-node cat-bio">
+      <div class="num">Discovery 12</div>
+      <div class="label">Consciousness as Circuit Element: Operator is part of the system</div>
+    </div>
+  </div>
+
+  <!-- Bottom row -->
+  <div class="branch b7">
+    <div class="branch-node cat-meta">
+      <div class="num">Discovery 7</div>
+      <div class="label">Suppression Boltzmann Distribution: Algorithmic monitoring program</div>
+    </div>
+  </div>
+  <div class="branch b8">
+    <div class="branch-node cat-physics">
+      <div class="num">Discovery 8</div>
+      <div class="label">Planetary Anchor Necessity: Devices as local telluric grid terminals</div>
+    </div>
+  </div>
+  <div class="branch b9">
+    <div class="branch-node cat-thermo">
+      <div class="num">Discovery 9</div>
+      <div class="label">Golden Ratio Cavity Optimization: phi:1:1/phi maximizes reactive energy</div>
+    </div>
+  </div>
+  <div class="branch b10">
+    <div class="branch-node cat-meta">
+      <div class="num">Discovery 10</div>
+      <div class="label">Muon-Catalyzed Fusion Without Neutrons: Energy absorbed by cavity field</div>
+    </div>
+  </div>
+</div>
+
+<!-- Legend -->
+<div style="max-width: 600px; margin: 20px auto 0 auto; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;">
+  <div style="display:flex; align-items:center; gap:6px; font-size:11px; color:#6B7280;">
+    <span style="width:12px; height:12px; border-radius:3px; background:#3B82F6; display:inline-block;"></span> Vacuum Physics
+  </div>
+  <div style="display:flex; align-items:center; gap:6px; font-size:11px; color:#6B7280;">
+    <span style="width:12px; height:12px; border-radius:3px; background:#06B6D4; display:inline-block;"></span> Thermodynamics
+  </div>
+  <div style="display:flex; align-items:center; gap:6px; font-size:11px; color:#6B7280;">
+    <span style="width:12px; height:12px; border-radius:3px; background:#22C55E; display:inline-block;"></span> Biofield / Consciousness
+  </div>
+  <div style="display:flex; align-items:center; gap:6px; font-size:11px; color:#6B7280;">
+    <span style="width:12px; height:12px; border-radius:3px; background:#F59E0B; display:inline-block;"></span> Meta / Suppression
+  </div>
+</div>
+
+</body>
+</html>
