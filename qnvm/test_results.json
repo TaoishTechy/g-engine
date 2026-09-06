@@ -1,0 +1,362 @@
+[
+  {
+    "generation": 0,
+    "time_s": 0.0,
+    "vacuum": {
+      "E_vac_rms": 0.000251215387834236,
+      "B_vac_rms": 0.0,
+      "u_ZPE_mean": 8.381526463906607e-19,
+      "coherence_mean": 0.5,
+      "noise_mean": 0.0
+    },
+    "cascade": {
+      "stage1": {
+        "super_permeability": 1.0000000000001474,
+        "hyperfine_gain": 10.0,
+        "muon_flux": 100.0,
+        "conditioned": false
+      },
+      "stage2": {
+        "cop": 1.0,
+        "temperature_rise": 0.0,
+        "ab_phase": 0.0,
+        "active": false
+      },
+      "stage3": {
+        "mass_reduction": 0.0,
+        "vta_output_W": 0.0,
+        "active": false
+      },
+      "self_oscillating": false,
+      "total_input_W": 26.8003,
+      "total_output_W": 0.0,
+      "cascade_cop": 0.0
+    },
+    "schumann_amplitude": 0.0,
+    "operator_coherence": 0.0
+  },
+  {
+    "generation": 1,
+    "time_s": 0.01,
+    "vacuum": {
+      "E_vac_rms": 0.00025130881113000214,
+      "B_vac_rms": 0.0,
+      "u_ZPE_mean": 8.387763405725257e-19,
+      "coherence_mean": 0.5014382004737854,
+      "noise_mean": 0.0
+    },
+    "cascade": {
+      "stage1": {
+        "super_permeability": 1.0000000000001474,
+        "hyperfine_gain": 10.0,
+        "muon_flux": 100.0,
+        "conditioned": false
+      },
+      "stage2": {
+        "cop": 1.0,
+        "temperature_rise": 0.0,
+        "ab_phase": 0.0,
+        "active": false
+      },
+      "stage3": {
+        "mass_reduction": 0.0,
+        "vta_output_W": 0.0,
+        "active": false
+      },
+      "self_oscillating": false,
+      "total_input_W": 26.8003,
+      "total_output_W": 0.0,
+      "cascade_cop": 0.0
+    },
+    "schumann_amplitude": 1.4382696994882607,
+    "operator_coherence": 0.0
+  },
+  {
+    "generation": 2,
+    "time_s": 0.02,
+    "vacuum": {
+      "E_vac_rms": 0.0002514305815566331,
+      "B_vac_rms": 0.0,
+      "u_ZPE_mean": 8.395896142110302e-19,
+      "coherence_mean": 0.5026683211326599,
+      "noise_mean": 0.0
+    },
+    "cascade": {
+      "stage1": {
+        "super_permeability": 1.0000000000001474,
+        "hyperfine_gain": 10.0,
+        "muon_flux": 100.0,
+        "conditioned": false
+      },
+      "stage2": {
+        "cop": 1.0,
+        "temperature_rise": 0.0,
+        "ab_phase": 0.0,
+        "active": false
+      },
+      "stage3": {
+        "mass_reduction": 0.0,
+        "vta_output_W": 0.0,
+        "active": false
+      },
+      "self_oscillating": false,
+      "total_input_W": 26.8003,
+      "total_output_W": 0.0,
+      "cascade_cop": 0.0
+    },
+    "schumann_amplitude": 1.2300229270181582,
+    "operator_coherence": 0.0
+  },
+  {
+    "generation": 3,
+    "time_s": 0.03,
+    "vacuum": {
+      "E_vac_rms": 0.0002514827065169811,
+      "B_vac_rms": 0.0,
+      "u_ZPE_mean": 8.399376504537619e-19,
+      "coherence_mean": 0.5030028820037842,
+      "noise_mean": 0.0
+    },
+    "cascade": {
+      "stage1": {
+        "super_permeability": 1.0000000000001474,
+        "hyperfine_gain": 10.0,
+        "muon_flux": 100.0,
+        "conditioned": false
+      },
+      "stage2": {
+        "cop": 1.0,
+        "temperature_rise": 0.0,
+        "ab_phase": 0.0,
+        "active": false
+      },
+      "stage3": {
+        "mass_reduction": 0.0,
+        "vta_output_W": 0.0,
+        "active": false
+      },
+      "self_oscillating": false,
+      "total_input_W": 26.8003,
+      "total_output_W": 0.0,
+      "cascade_cop": 0.0
+    },
+    "schumann_amplitude": 0.3345200024144573,
+    "operator_coherence": 0.0
+  },
+  {
+    "generation": 4,
+    "time_s": 0.04,
+    "vacuum": {
+      "E_vac_rms": 0.00025162106612697244,
+      "B_vac_rms": 0.0,
+      "u_ZPE_mean": 8.40861869691925e-19,
+      "coherence_mean": 0.5030260682106018,
+      "noise_mean": 0.0
+    },
+    "cascade": {
+      "stage1": {
+        "super_permeability": 1.0000000000001474,
+        "hyperfine_gain": 10.0,
+        "muon_flux": 100.0,
+        "conditioned": false
+      },
+      "stage2": {
+        "cop": 1.0,
+        "temperature_rise": 0.0,
+        "ab_phase": 0.0,
+        "active": false
+      },
+      "stage3": {
+        "mass_reduction": 0.0,
+        "vta_output_W": 0.0,
+        "active": false
+      },
+      "self_oscillating": false,
+      "total_input_W": 26.8003,
+      "total_output_W": 0.0,
+      "cascade_cop": 0.0
+    },
+    "schumann_amplitude": 0.023448819494799378,
+    "operator_coherence": 0.0
+  },
+  {
+    "generation": 5,
+    "time_s": 0.05,
+    "vacuum": {
+      "E_vac_rms": 0.0002519084664527327,
+      "B_vac_rms": 0.0,
+      "u_ZPE_mean": 8.427839789415569e-19,
+      "coherence_mean": 0.5028296113014221,
+      "noise_mean": 0.0
+    },
+    "cascade": {
+      "stage1": {
+        "super_permeability": 1.0000000000001474,
+        "hyperfine_gain": 10.0,
+        "muon_flux": 100.0,
+        "conditioned": false
+      },
+      "stage2": {
+        "cop": 1.0,
+        "temperature_rise": 0.0,
+        "ab_phase": 0.0,
+        "active": false
+      },
+      "stage3": {
+        "mass_reduction": 0.0,
+        "vta_output_W": 0.0,
+        "active": false
+      },
+      "self_oscillating": false,
+      "total_input_W": 26.8003,
+      "total_output_W": 0.0,
+      "cascade_cop": 0.0
+    },
+    "schumann_amplitude": -0.1964496269769646,
+    "operator_coherence": 0.0
+  },
+  {
+    "generation": 6,
+    "time_s": 0.06,
+    "vacuum": {
+      "E_vac_rms": 0.00025090508279390633,
+      "B_vac_rms": 0.0,
+      "u_ZPE_mean": 8.360834023895711e-19,
+      "coherence_mean": 0.5021374225616455,
+      "noise_mean": 0.0
+    },
+    "cascade": {
+      "stage1": {
+        "super_permeability": 1.0000000000001474,
+        "hyperfine_gain": 10.0,
+        "muon_flux": 100.0,
+        "conditioned": false
+      },
+      "stage2": {
+        "cop": 1.0,
+        "temperature_rise": 0.0,
+        "ab_phase": 0.0,
+        "active": false
+      },
+      "stage3": {
+        "mass_reduction": 0.0,
+        "vta_output_W": 0.0,
+        "active": false
+      },
+      "self_oscillating": false,
+      "total_input_W": 26.8003,
+      "total_output_W": 0.0,
+      "cascade_cop": 0.0
+    },
+    "schumann_amplitude": -0.6921633723495688,
+    "operator_coherence": 0.0
+  },
+  {
+    "generation": 7,
+    "time_s": 0.07,
+    "vacuum": {
+      "E_vac_rms": 0.00025157982599921525,
+      "B_vac_rms": 0.0,
+      "u_ZPE_mean": 8.405865219455215e-19,
+      "coherence_mean": 0.5013695359230042,
+      "noise_mean": 0.0
+    },
+    "cascade": {
+      "stage1": {
+        "super_permeability": 1.0000000000001474,
+        "hyperfine_gain": 10.0,
+        "muon_flux": 100.0,
+        "conditioned": false
+      },
+      "stage2": {
+        "cop": 1.0,
+        "temperature_rise": 0.0,
+        "ab_phase": 0.0,
+        "active": false
+      },
+      "stage3": {
+        "mass_reduction": 0.0,
+        "vta_output_W": 0.0,
+        "active": false
+      },
+      "self_oscillating": false,
+      "total_input_W": 26.8003,
+      "total_output_W": 0.0,
+      "cascade_cop": 0.0
+    },
+    "schumann_amplitude": -0.7679370248477625,
+    "operator_coherence": 0.0
+  },
+  {
+    "generation": 8,
+    "time_s": 0.08,
+    "vacuum": {
+      "E_vac_rms": 0.0002512118371669203,
+      "B_vac_rms": 0.0,
+      "u_ZPE_mean": 8.381292785383561e-19,
+      "coherence_mean": 0.5008973479270935,
+      "noise_mean": 0.0
+    },
+    "cascade": {
+      "stage1": {
+        "super_permeability": 1.0000000000001474,
+        "hyperfine_gain": 10.0,
+        "muon_flux": 100.0,
+        "conditioned": false
+      },
+      "stage2": {
+        "cop": 1.0,
+        "temperature_rise": 0.0,
+        "ab_phase": 0.0,
+        "active": false
+      },
+      "stage3": {
+        "mass_reduction": 0.0,
+        "vta_output_W": 0.0,
+        "active": false
+      },
+      "self_oscillating": false,
+      "total_input_W": 26.8003,
+      "total_output_W": 0.0,
+      "cascade_cop": 0.0
+    },
+    "schumann_amplitude": -0.47232803284916586,
+    "operator_coherence": 0.0
+  },
+  {
+    "generation": 9,
+    "time_s": 0.09,
+    "vacuum": {
+      "E_vac_rms": 0.0002515672822482884,
+      "B_vac_rms": 0.0,
+      "u_ZPE_mean": 8.40502873306077e-19,
+      "coherence_mean": 0.5005018711090088,
+      "noise_mean": 0.0
+    },
+    "cascade": {
+      "stage1": {
+        "super_permeability": 1.0000000000001474,
+        "hyperfine_gain": 10.0,
+        "muon_flux": 100.0,
+        "conditioned": false
+      },
+      "stage2": {
+        "cop": 1.0,
+        "temperature_rise": 0.0,
+        "ab_phase": 0.0,
+        "active": false
+      },
+      "stage3": {
+        "mass_reduction": 0.0,
+        "vta_output_W": 0.0,
+        "active": false
+      },
+      "self_oscillating": false,
+      "total_input_W": 26.8003,
+      "total_output_W": 0.0,
+      "cascade_cop": 0.0
+    },
+    "schumann_amplitude": -0.39532257115388697,
+    "operator_coherence": 0.0
+  }
+]
