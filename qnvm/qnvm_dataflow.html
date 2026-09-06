@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #FFFFFF;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 36px 48px;
+    min-width: 1100px;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    font-size: 12px;
+    color: #6B7280;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .module {
+    width: 100%;
+    border: 1.5px solid #E5E7EB;
+    border-radius: 10px;
+    padding: 16px 20px;
+    background: #FAFBFC;
+    position: relative;
+  }
+  .module.geo { border-color: #F59E0B; background: #FFFBEB; }
+  .module.vac { border-color: #3B82F6; background: #EFF6FF; }
+  .module.s1  { border-color: #3B82F6; background: #EFF6FF; }
+  .module.s2  { border-color: #06B6D4; background: #ECFEFF; }
+  .module.s3  { border-color: #8B5CF6; background: #F5F3FF; }
+  .module.cas { border-color: #EF4444; background: #FEF2F2; }
+  .module.op  { border-color: #22C55E; background: #F0FDF4; }
+
+  .mod-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .mod-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+  }
+  .mod-tag {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: white;
+  }
+  .geo .mod-tag { background: #F59E0B; }
+  .vac .mod-tag { background: #3B82F6; }
+  .s1  .mod-tag { background: #3B82F6; }
+  .s2  .mod-tag { background: #06B6D4; }
+  .s3  .mod-tag { background: #8B5CF6; }
+  .cas .mod-tag { background: #EF4444; }
+  .op  .mod-tag { background: #22C55E; }
+
+  .mod-desc {
+    font-size: 11px;
+    color: #374151;
+    line-height: 1.5;
+  }
+  .mod-eq {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 10px;
+    color: #6B7280;
+    margin-top: 6px;
+  }
+
+  .arrow-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    position: relative;
+  }
+  .arrow-line {
+    width: 2px;
+    height: 100%;
+    background: #9CA3AF;
+  }
+  .arrow-head {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #9CA3AF;
+  }
+  .arrow-label {
+    position: absolute;
+    right: calc(50% + 14px);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 9px;
+    font-weight: 600;
+    color: #6B7280;
+    white-space: nowrap;
+    background: #FFFFFF;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid #E5E7EB;
+  }
+
+  /* Side inputs */
+  .side-row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    max-width: 900px;
+  }
+  .side-input {
+    flex: 0 0 200px;
+    border: 1px dashed #D1D5DB;
+    border-radius: 8px;
+    padding: 10px 12px;
+    background: #F9FAFB;
+  }
+  .side-input .si-label {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #9CA3AF;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  .side-input .si-value {
+    font-size: 10px;
+    color: #374151;
+    line-height: 1.4;
+  }
+  .main-col {
+    flex: 1;
+  }
+
+  .kpi-bar {
+    max-width: 900px;
+    margin: 20px auto 0;
+    background: #F0FDF4;
+    border: 1px solid #86EFAC;
+    border-radius: 10px;
+    padding: 14px 20px;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .kpi-item {
+    text-align: center;
+  }
+  .kpi-val {
+    font-size: 16px;
+    font-weight: 700;
+    color: #15803D;
+  }
+  .kpi-lbl {
+    font-size: 9px;
+    color: #374151;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<div class="title">QNVM-GE Simulation Architecture</div>
+<div class="subtitle">Data flow from geophysical emulation through three-stage cascade to unified field output</div>
+
+<div class="flow">
+  <div class="module geo">
+    <div class="mod-header">
+      <div class="mod-name">GeophysicalEmulator</div>
+      <div class="mod-tag">Anchor</div>
+    </div>
+    <div class="mod-desc">Synthetic Schumann resonance injection (7.83 Hz), telluric current map, water table resonance emulation. Replaces physical geographic node (Lang Island / Giza).</div>
+    <div class="mod-eq">Schumann: f_n = c/(2&pi;R_E) &radic;(n(n+1)) &nbsp;|&nbsp; Telluric: J_telluric(x,y)</div>
+  </div>
+
+  <div class="arrow-zone">
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+    <div class="arrow-label">Resonance + Telluric</div>
+  </div>
+
+  <div class="side-row">
+    <div class="side-input">
+      <div class="si-label">Operator Model</div>
+      <div class="si-value">Heart-rate oscillator, intent projection, phase-lock via &alpha; = 1/137. Biofield memory persistence &tau; after shutdown.</div>
+    </div>
+    <div class="main-col">
+      <div class="module vac">
+        <div class="mod-header">
+          <div class="mod-name">VacuumField</div>
+          <div class="mod-tag">Core Grid</div>
+        </div>
+        <div class="mod-desc">3D SED grid of E_vac, B_vac, P_vac, ZPE energy density u_ZPE. Coloured noise (1/f spectrum). Diffusion + decay on coherence/noise/resource/memory channels.</div>
+        <div class="mod-eq">S(f) &prop; 1/f &nbsp;|&nbsp; u_ZPE = &frac12;&epsilon;&#8320;&langle;E&sup2;&rangle; + &frac12;&mu;&#8320;&langle;B&sup2;&rangle;</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow-zone">
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+    <div class="arrow-label">Conditioned vacuum</div>
+  </div>
+
+  <div class="module s1">
+    <div class="mod-header">
+      <div class="mod-name">Stage1_Magnetron</div>
+      <div class="mod-tag">Stage 1</div>
+    </div>
+    <div class="mod-desc">Hydrogen-magnetic lattice with super-permeability. Hyperfine resonance engine (1.42 GHz maser). Muon-catalysed fusion without neutrons. Fractal domain-wall antenna. 8 novel approaches (Group A).</div>
+    <div class="mod-eq">&mu;<sub>super</sub> = &mu;&#8320; exp(n<sub>H</sub>&mu;<sub>H</sub>&sup2;/k<sub>B</sub>T&epsilon;&#8320;c&sup2;) &nbsp;|&nbsp; P<sub>thr</sub> = &hbar;&omega;&sup3;V/(2&pi;&sup2;c&sup3;&tau;<sub>coh</sub>)</div>
+  </div>
+
+  <div class="arrow-zone">
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+    <div class="arrow-label">Conditioned vacuum + Persistent current</div>
+  </div>
+
+  <div class="module s2">
+    <div class="mod-header">
+      <div class="mod-name">Stage2_GreyMotor</div>
+      <div class="mod-tag">Stage 2</div>
+    </div>
+    <div class="mod-desc">Topological current extraction via vector potential A. Aharonov-Bohm current solver. Three-reservoir Carnot engine. Cold electricity as fourth current state. 8 novel approaches (Group B).</div>
+    <div class="mod-eq">J<sub>top</sub> = (e&sup2;/h)&nabla;&times;A &nbsp;|&nbsp; &eta; = 1 &minus; (T<sub>c</sub>/T<sub>h</sub>)(1 &minus; T<sub>vac</sub>/T<sub>h</sub>) &approx; 261</div>
+  </div>
+
+  <div class="arrow-zone">
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+    <div class="arrow-label">Topological current + EM coherence</div>
+  </div>
+
+  <div class="module s3">
+    <div class="mod-header">
+      <div class="mod-name">Stage3_SweetVTA</div>
+      <div class="mod-tag">Stage 3</div>
+    </div>
+    <div class="mod-desc">Scalar wave propagation (superluminal v_s). Gravitational metric modulation via vacuum polarisation. Fractal impedance matching. Local de Sitter bubble. 8 novel approaches (Group C).</div>
+    <div class="mod-eq">&nabla;&Phi;<sub>g</sub> = &minus;(&kappa;<sub>s</sub>/c&sup2;) &nabla;&middot;P<sub>vac</sub> &nbsp;|&nbsp; v<sub>s</sub> = c/sin&theta;</div>
+  </div>
+
+  <div class="arrow-zone">
+    <div class="arrow-line"></div>
+    <div class="arrow-head"></div>
+    <div class="arrow-label">Scalar beam + Gravity gradient</div>
+  </div>
+
+  <div class="module cas">
+    <div class="mod-header">
+      <div class="mod-name">CascadeEngine</div>
+      <div class="mod-tag">Unified</div>
+    </div>
+    <div class="mod-desc">Serial cascade solver with feedback. Unified field equation FDTD. Self-oscillation detection. Three-stage phase diagram. Golden-ratio cavity optimisation. 8 novel approaches (Group D).</div>
+    <div class="mod-eq">&nabla;&sup2;&Psi;<sub>G</sub> &minus; v<sub>G</sub><sup>&minus;2</sup>&part;<sub>t</sub><sup>2</sup>&Psi;<sub>G</sub> = &minus;4&pi;G/c&sup4; (T<sub>&mu;&nu;</sub> + T<sub>&mu;&nu;</sub><sup>ZPE</sup>&xi;) &Psi;<sub>EM</sub></div>
+  </div>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi-item"><div class="kpi-val">&gt;200</div><div class="kpi-lbl">COP (Stage 2)</div></div>
+  <div class="kpi-item"><div class="kpi-val">&gt;10<sup>7</sup></div><div class="kpi-lbl">COP (Stage 3)</div></div>
+  <div class="kpi-item"><div class="kpi-val">-1.8%/kWh</div><div class="kpi-lbl">Mass Reduction</div></div>
+  <div class="kpi-item"><div class="kpi-val">0.85&ndash;0.92</div><div class="kpi-lbl">Spectral Radius</div></div>
+  <div class="kpi-item"><div class="kpi-val">&gt;0.90</div><div class="kpi-lbl">Diversity</div></div>
+  <div class="kpi-item"><div class="kpi-val">&gt;1 &mu;m</div><div class="kpi-lbl">Coherence Length</div></div>
+</div>
+
+</body>
+</html>
