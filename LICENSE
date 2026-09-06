@@ -1,0 +1,200 @@
+Open Falsification License v1.0
+==============================
+
+Copyright (c) 2026 Advanced Propulsion Physics Laboratory
+
+Preamble
+--------
+
+This license is designed for scientific software and frameworks that make
+extraordinary claims. It extends the freedoms of open-source licensing with a
+reciprocal obligation: if you use this work, you must preserve its capacity to
+be falsified. The right to prove something wrong is as sacred as the right to
+prove it right.
+
+The Open Falsification License (OFL) guarantees that no derivative work, patent,
+or commercial arrangement may suppress, obscure, or circumvent the falsification
+mechanisms embedded in this software. It ensures that negative results, null
+findings, and refutations carry the same legal standing and distribution rights
+as positive confirmations.
+
+
+Section 1 — Definitions
+
+  "Work" refers to the software, documentation, data, equations, diagrams, and
+  all other materials covered by this license.
+
+  "Falsification Mechanism" means any module, test, assertion, logging facility,
+  or documented protocol whose purpose is to detect, measure, or report when the
+  Work's claims fail — including but not limited to: null-hypothesis checks,
+  ablation studies, boundary-condition validators, statistical significance
+  tests, noise-floor measurements, and reproducibility checklists.
+
+  "Covered Claim" means any empirical prediction, numerical threshold, or
+  physical assertion made by or on behalf of the Work, whether in source code,
+  documentation, or accompanying publications.
+
+  "Derivative Work" has the meaning given in applicable copyright law, and
+  includes any modification, extension, or adaptation of the Work.
+
+  "You" means any person or entity exercising permissions granted by this
+  license.
+
+
+Section 2 — Granted Permissions
+
+  Subject to the conditions in Sections 3–6, You are hereby granted a
+  worldwide, royalty-free, non-exclusive right to:
+
+  a) Reproduce the Work in any medium or format.
+
+  b) Modify the Work, create Derivative Works, and distribute them under the
+     terms of this license.
+
+  c) Use the Work for any purpose, including commercial applications, provided
+     that the conditions of Sections 3–6 are met.
+
+  d) Publish results — whether positive, negative, or inconclusive — obtained
+     through the use of the Work, without fear of legal retaliation.
+
+  e) Develop and distribute competing or alternative models that reference the
+     Work, provided attribution is given as specified in Section 4.
+
+
+Section 3 — Falsification Preservation Condition
+
+  This is the core condition of the OFL. Any Derivative Work that You
+  distribute must:
+
+  a) Retain all Falsification Mechanisms present in the original Work, or
+     provide functionally equivalent replacements that test the same Covered
+     Claims with equal or greater statistical power.
+
+  b) Not disable, bypass, obscure, or weaken any Falsification Mechanism by
+     default. Falsification Mechanisms may only be deactivated through an
+     explicit, documented, and user-visible configuration option that clearly
+     states the scientific implications of deactivation.
+
+  c) Include a "FALSIFICATION.md" file (or equivalent) that:
+     i.   Lists all Covered Claims testable by the software.
+     ii.  Describes how to run each Falsification Mechanism.
+     iii. States the criteria under which each Covered Claim is considered
+          falsified.
+     iv.  Provides a template for reporting null or negative results.
+
+  d) If You add new Covered Claims to the Derivative Work, You must also add
+     corresponding Falsification Mechanisms for those claims before
+     distribution.
+
+
+Section 4 — Attribution and Negative-Result Citation
+
+  a) You must give appropriate credit to the original authors, provide a link
+     to this license, and indicate if changes were made. You may do so in any
+     reasonable manner, but not in any way that suggests the licensor endorses
+     You or Your use.
+
+  b) If Your use of the Work produces negative, null, or inconclusive results
+     that address a Covered Claim, You are requested (but not required) to
+     report those results publicly. The licensor waives any right to suppress
+     or contest the publication of such results.
+
+  c) If Your Derivative Work removes or modifies a Covered Claim, You must
+     document the original claim and the reason for its removal or modification
+     in the FALSIFICATION.md file.
+
+
+Section 5 — Anti-Suppression Clause
+
+  a) No party may use patent rights, trade secret claims, non-disclosure
+     agreements, or any other legal instrument to suppress the publication or
+     distribution of:
+     i.   Results that falsify or fail to confirm any Covered Claim.
+     ii.  Source code or methods that implement Falsification Mechanisms.
+     iii. Reproducible evidence contradicting the Work's predictions.
+
+  b) If any provision of this Section is held unenforceable, the remaining
+     provisions shall continue in full force and effect, and the parties shall
+     negotiate in good faith to replace the unenforceable provision with a
+     valid provision that most closely approximates the intent and economic
+     effect of the unenforceable provision.
+
+
+Section 6 — No Endorsement of Claims
+
+  a) This license grants You permission to use and modify the Work. It does
+     not constitute an endorsement of any Covered Claim by the licensor or any
+     contributor.
+
+  b) The Work may contain claims that are speculative, controversial, or
+     contradicted by established science. You are encouraged — but not
+     required — to accompany any distribution with an independent scientific
+     assessment.
+
+  c) Neither the licensor nor any contributor shall be held liable for damages
+     arising from reliance on any Covered Claim. THE WORK IS PROVIDED "AS IS",
+     WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+     LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+     PURPOSE AND NONINFRINGEMENT.
+
+
+Section 7 — Copyleft
+
+  a) Any Derivative Work that You distribute must be released under the Open
+     Falsification License v1.0 or a later version approved by the licensor.
+
+  b) You may not apply additional restrictions that violate the terms of this
+     license, including but not limited to: restricting the right to publish
+     negative results, requiring approval before publishing results, or
+     conditioning access on agreement not to falsify Covered Claims.
+
+
+Section 8 — Termination
+
+  a) Your rights under this license terminate automatically if You fail to
+     comply with any condition of Sections 3–7.
+
+  b) Upon termination, You must cease all distribution of the Work and any
+     Derivative Works. However, termination does not affect the rights of
+     those who have received copies from You under this license, provided
+     they remain in compliance.
+
+  c) Rights may be reinstated if, within 60 days of termination, You cure
+     all violations and notify the licensor in writing.
+
+
+Section 9 — Versions
+
+  The Free Software Foundation may publish revised versions of the Open
+  Falsification License from time to time. Such new versions will be similar
+  in spirit to the present version, but may differ in detail to address new
+  problems or concerns.
+
+  Each version is given a distinguishing version number. If the Work specifies
+  that a certain numbered version of the OFL "or any later version" applies to
+  it, You have the option of following the terms and conditions either of that
+  numbered version or of any later version published by the licensor. If the
+  Work does not specify a version number, You may choose any version ever
+  published by the licensor.
+
+
+Section 10 — Moral Statement
+
+  Science advances through both confirmation and refutation. This license
+  exists because the right to be wrong — and to prove others wrong — is the
+  foundation of the scientific method. Any legal framework that protects claims
+  from falsification is antithetical to science.
+
+  By using this Work, You affirm that falsifiability is not a weakness but a
+  strength, and that the most valuable result is not the one that confirms
+  what we wish were true, but the one that reveals what actually is.
+
+
+---
+
+This license is inspired by the GNU General Public License v3, the Creative
+Commons Attribution-ShareAlike 4.0 License, and the scientific principle of
+falsifiability articulated by Karl Popper.
+
+For the full text of this license, contact the Advanced Propulsion Physics
+Laboratory or visit the project repository.
